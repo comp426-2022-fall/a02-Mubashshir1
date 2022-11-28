@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import minimist from "minimist";
-import nodefetch from "node-fetch";
-import moment from "moment-timezone";
+import minimist from 'minimist';
+import nodefetch from 'node-fetch';
+import moment from 'moment-timezone';
 
 const args = minimist(process.argv.slice(2));
 
@@ -56,12 +56,18 @@ if (args.j) {
 
 const days = args.d 
 
-if (days == 0) {
-  console.log("today.")
-} else if (days > 1) {
-  console.log("in " + days + " days.")
+if (data.daily.precipitation_hours[days] == 0) {
+	console.log('You will not need your galoshes');
 } else {
-  console.log("tomorrow.")
+	console.log('You might need your galoshes');
+}
+
+if (days == 0) {
+  console.log('today.');
+} else if (days > 1) {
+  console.log('in ' + days + ' days.');
+} else {
+  console.log('tomorrow.');
 }
 
 
