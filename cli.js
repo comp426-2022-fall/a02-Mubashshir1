@@ -52,13 +52,6 @@ if (args.j) {
 	process.exit(0);
 }
 
-
-if (data.daily.precipitation_hours[days] != 0) {
-	console.log("You might need your galoshes")
-} else {
-    console.log("You will not need your galoshes")
-
-}
 const days = args.d 
 
 if (days == 0) {
@@ -68,7 +61,6 @@ if (days == 0) {
 } else {
   console.log("tomorrow.")
 }
-process.exit(0);
 
 
 
